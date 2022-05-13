@@ -29,7 +29,10 @@ form.addEventListener('submit', async event => {
     window.location.href = __uv$config.prefix + __uv$config.encodeUrl(url);
   });
 });
-
+//make a regex check for a url including from ./blacklisted.json
+if (blacklisted.some(regex => regex.test(url))) {
+  window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+}
 function isUrl(val = '') {
   if (/^http(s?):\/\//.test(val) || val.includes('.') && val.substr(0, 1) !== ' ') return true;
   return false;
@@ -47,7 +50,8 @@ try {
 } catch (e) {
     inFrame = true
 }
-
+//change color of navbar using css
+/*
 if (!inFrame && !navigator.userAgent.includes("Firefox")) {
 const popup = open("about:blank", "_blank")
 if (!popup || popup.closed) {
@@ -72,4 +76,5 @@ if (!popup || popup.closed) {
   location.replace("https://google.com")
     }
 }
+*/
 }
