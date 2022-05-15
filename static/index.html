@@ -5,132 +5,54 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta
-      name = "description"
-      content = ""
-      />
+        name = "description"
+        content = ""
+        />
     <meta property="og:title" content="Iridium" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="" />
     <meta property="og:description" content="Iridium" />
     <style>
-      @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
-      :root {
-        --background-primary: #252525;
-        --text-color-primary: #777777;
-        --text-color-secondary: #ffffff;
-        --form-border: #ffffff;
-        --form-text: #ffffff;
-        --header-color: #333533;
-        --header-height: 4em;
-      }
-      body {
-        background-color: var(--background-primary);
-      }
-      h1 {
-        font-family: "Open Sans", sans-serif;
-        display: inline;
-        background-image: linear-gradient(to right, var(--text-color-primary), var(--text-color-secondary));
-        -webkit-background-clip: text;
-        color: transparent;
-      }
-      #content {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 3vw;
-      }
-      #input {
-        border-radius: 20em;
-        font-size: 1vw;
-        border: .1em solid var(--form-border);
-        background-color: var(--background-primary);
-        position: absolute;
-        transform: translateX(-50%);
-        width: 50vw;
-        text-align: left;
-        padding-left: 20px;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        color: white !important;
-        transition: width 1s;
-      }
-      #input:focus {
-        width: 70vw;
-      }
-      #input::placeholder {
-        color: white !important;
-      }
-      #input:focus::placeholder {
-        color: transparent !important;
-      }
-      #button {
-        display: none;
-      }
-      #header {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: var(--header-height);
-        background-color: var(--header-color);
-        text-align: center;
-      }
-      #header a, a:link, a:visited, a:hover, a:active {
-        height: var(--header-height);
-        color: #fff;
-        font-family: "Open Sans", sans-serif;
-        font-size: 1.5em;
-        text-decoration: none;
-        background-color: var(--header-color);
-        transition: background-color .5s;
-        position: relative;
-        top: 25%;
-        transform: translateY(-100%);
-        padding: .5em;
-      }
-      #header a:hover, a:active {
-        background-color: #888;
-      }
-      #button {
-        height: 30px;
-        padding-left:50px;
-        padding-right: 50px;
-      }
-      #form {
-        display: flex;
-        justify-content: center;
-      }
     </style>
+    <script src="theme_loader.js"></script>
+    <link rel="stylesheet" href="global.css">
   </head>
   <body onload="onLoad()">
     <center id="content"><h1>Iridium</h1>
       <form>
         <input type=text name=url placeholder="Search the web!" id="input">
       </form>
-</center>
+    </center>
+    <form id="theme-chooser">
+      <select id="theme-chooser-sel">
+        <option value="default">Select a theme</option>
+        <option value="default">Default</option>
+        <option value="dracula">Dracula</option>
+        <option value="rosepine">Rose Pine</option>
+      </select>
+    </form>
     <script src="uv/uv.bundle.js"></script>
     <script src="uv/uv.config.js"></script>
     <script src="index.js"></script>
     <script>
       function rammerheadLink() {
-        let url = 'https://r.' + location.href.slice(8)
-        window.location.href = url
-      }
+              let url = 'https://r.' + location.href.slice(8)
+              window.location.href = url
+            }
       function supportServer(){
-        let url = location.href.slice(8) + 'service/hvtrs8%2F-dksaopd%2Ccmm-cjalnglq%2F%3B57575%3B1282817%3B3%3B2-97575%3B4295702%3A1%3B2%3A'
-      }
+              let url = location.href.slice(8) + 'service/hvtrs8%2F-dksaopd%2Ccmm-cjalnglq%2F%3B57575%3B1282817%3B3%3B2-97575%3B4295702%3A1%3B2%3A'
+            }
     </script>
     <div id="header">
       <span id="header-links">
-<!--         Use relative URLS (starting with "/") to improve page speed, code readability, and browser support -->
-<!--         Rewriting this rammerhead link part is highly recommended, but it would require changing some hosting settings (I think) -->
+        <!--         Use relative URLS (starting with "/") to improve page speed, code readability, and browser support -->
+        <!--         Rewriting this rammerhead link part is highly recommended, but it would require changing some hosting settings (I think) -->
         <a href="javascript: rammerheadLink()">Rammerhead</a>
-<!--         <a href="https://google.com">Support server</a>  -->
+        <!--         <a href="https://google.com">Support server</a>  -->
         <a href="javascript: supportServer()">Support Server</a>
         <a href="/other/contributors.html">Contributors</a>
         <a href="">IridiumVM</a>
-        
+
       </span>
     </div>
   </body>

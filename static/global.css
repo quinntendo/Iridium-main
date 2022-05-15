@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+
+
+*:focus {
+  outline: none;
+}
+body {
+  background-color: var(--background-primary);
+}
+h1 {
+  font-family: "Open Sans", sans-serif;
+  display: inline;
+  background-image: linear-gradient(to right, var(--text-color-primary), var(--text-color-secondary));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+#content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3vw;
+}
+#input {
+  border-radius: 20em;
+  font-size: 1vw;
+  border: var(--input-border-size) solid var(--input-border-color);
+  background-color: var(--input-background-color);
+  position: absolute;
+  transform: translateX(-50%);
+  width: 50vw;
+  text-align: left;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: var(--input-text-color) !important;
+  transition: width 1s;
+}
+#input:focus {
+  width: 70vw;
+}
+#input::placeholder {
+  color: var(--input-placeholder-color) !important;
+}
+#input:focus::placeholder {
+  color: transparent !important;
+}
+#button {
+  display: none;
+}
+#header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  background-color: var(--header-color);
+  text-align: center;
+}
+#header a, a:link, a:visited, a:hover, a:active {
+  height: var(--header-height);
+  color: var(--header-text-color);
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.5em;
+  text-decoration: none;
+  background-color: var(--header-color);
+  transition: background-color .5s;
+  position: relative;
+  top: 25%;
+  transform: translateY(-100%);
+  padding: .5em;
+}
+#header a:hover, a:active {
+  background-color: var(--header-color);
+}
+#button {
+  height: 30px;
+  padding-left:50px;
+  padding-right: 50px;
+}
+#form {
+  display: flex;
+  justify-content: center;
+}
+
+#theme-chooser {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}

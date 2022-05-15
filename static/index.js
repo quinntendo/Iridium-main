@@ -6,7 +6,7 @@
 //bro did you memorize rejects
 // (new RegEx(/*en/)).test(string) ? "gay" : "not gay"
 //how to make blacklpist with a json file python9160 this is clientside
-//yeye ik 
+//yeye ik
 const form = document.querySelector('form');
 const input = document.querySelector('input');
 // const blacklisted = require("./blacklisted.json").patterns;
@@ -20,7 +20,7 @@ form.addEventListener('submit', async event => {
     if (url == "pornhub.com") url = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
     if (url == "xvideo.com") url =
 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
-    if (url == "canary.giggl.app") url = 
+    if (url == "canary.giggl.app") url =
 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
     if (url == "wattpad.com") url = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
     else if (!(url.startsWith('https://') || url.startsWith('http://'))) url = 'http://' + url;
@@ -30,9 +30,9 @@ form.addEventListener('submit', async event => {
   });
 });
 //make a regex check for a url including from ./blacklisted.json
-if (blacklisted.some(regex => regex.test(url))) {
-  window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
-}
+// if (blacklisted.some(regex => regex.test(url))) {
+//   window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+// }
 function isUrl(val = '') {
   if (/^http(s?):\/\//.test(val) || val.includes('.') && val.substr(0, 1) !== ' ') return true;
   return false;
@@ -77,4 +77,12 @@ if (!popup || popup.closed) {
     }
 }
 */
+}
+
+
+// Theme stuff
+let theme_chooser = document.getElementById('theme-chooser-sel')
+theme_chooser.onchange = () => {
+  localStorage.setItem('customThemeName', theme_chooser.options[theme_chooser.selectedIndex].value)
+  location.reload()
 }

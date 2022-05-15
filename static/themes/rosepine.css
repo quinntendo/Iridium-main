@@ -1,0 +1,13 @@
+:root {
+  --background-primary: #191724;
+  --text-color-primary: #31748f;
+  --text-color-secondary: #9ccfd8;
+  --header-color: #26233a;
+  --header-height: 4em;
+  --header-text-color: #e0def4;
+  --input-text-color: #e0def4;
+  --input-placeholder-color: #6e6a86;
+  --input-background-color: #1f1d2e;
+  --input-border-color: #eb6f92;
+  --input-border-size: 0.1em;
+}
