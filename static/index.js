@@ -50,8 +50,7 @@ try {
 } catch (e) {
     inFrame = true
 }
-//change color of navbar using css
-/*
+
 if (!inFrame && !navigator.userAgent.includes("Firefox")) {
 const popup = open("about:blank", "_blank")
 if (!popup || popup.closed) {
@@ -76,7 +75,7 @@ if (!popup || popup.closed) {
   location.replace("https://google.com")
     }
 }
-*/
+
 }
 
 
